@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(ls -v --color)
+echo $(ls -1 --color)
