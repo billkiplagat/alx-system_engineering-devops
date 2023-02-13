@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(head --lines=10 /etc/passwd) | fmt  
+head --lines=10 /etc/passwd  
