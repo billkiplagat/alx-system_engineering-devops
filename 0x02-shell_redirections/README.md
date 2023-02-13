@@ -1,0 +1,1 @@
+starting on shell redirections
