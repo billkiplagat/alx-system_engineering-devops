@@ -1,0 +1,17 @@
+total 52
+drwxrwxr-x 2 vagrant vagrant 4096 Feb 13 07:37 .
+drwxrwxr-x 6 vagrant vagrant 4096 Feb 13 06:07 ..
+-rwxrwxr-x 1 vagrant vagrant   32 Feb 13 06:18 0-hello_world
+-rwxrwxr-x 1 vagrant vagrant   27 Feb 13 06:42 1-confused_smiley
+-rwxrwxr-x 1 vagrant vagrant    0 Feb 13 06:14 10-no_more_js
+-rwxrwxr-x 1 vagrant vagrant   42 Feb 13 06:50 2-hellofile
+-rwxrwxr-x 1 vagrant vagrant   56 Feb 13 06:59 3-twofiles
+-rwxrwxr-x 1 vagrant vagrant   54 Feb 13 07:07 4-lastlines
+-rwxrwxr-x 1 vagrant vagrant   56 Feb 13 07:15 5-firstlines
+-rwxrwxr-x 1 vagrant vagrant   51 Feb 13 07:25 6-third_line
+-rwxrwxr-x 1 vagrant vagrant   75 Feb 13 07:33 7-file
+-rwxrwxr-x 1 vagrant vagrant   43 Feb 13 07:37 8-cwd_state
+-rwxrwxr-x 1 vagrant vagrant    0 Feb 13 06:14 9-duplicate_last_line
+-rwxrwxr-x 1 vagrant vagrant  121 Feb 13 06:09 gitScript.sh
+-rw-rw-r-- 1 vagrant vagrant  151 Feb 13 07:19 iacta
+-rw-rw-r-- 1 vagrant vagrant    0 Feb 13 07:37 ls_cwd_content
