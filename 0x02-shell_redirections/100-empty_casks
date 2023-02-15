@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1laR | find ./ -type f -empty -printf '%P\n'
+find . -empty -printf "%f\n"
