@@ -3,12 +3,10 @@
 count=1
 while [ $count -le 10 ];
 do
-  if [ $count != 9 ];
-  then
     echo "Best School"
-  else
+  if [ $count -eq 9 ]
+  then
     echo "Hi"
   fi
   ((count++))
-    
 done
