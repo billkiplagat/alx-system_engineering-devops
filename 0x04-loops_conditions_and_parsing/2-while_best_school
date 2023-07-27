@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Using the while loop to count from 1 to 10
+count=1
+while [ $count -le 10 ];
+do
+  echo "Best School"
+  ((count++))
+    
+done
