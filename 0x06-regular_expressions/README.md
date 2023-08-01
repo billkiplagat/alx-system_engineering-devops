@@ -1,0 +1,2 @@
+# ALX 0x06 Regular Expression Repository
+Welcome to the ALX 0x06 Regular Expression Repository! This repository contains a collection of useful regular expressions and examples that can be utilized for various text processing tasks, such as pattern matching, validation, extraction, and more. Regular expressions are a powerful tool that can significantly enhance your text manipulation capabilities in your DevOps and software development projects.
