@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Use SSH with single-character flags to connect to the server
+# -i flag to specify the private key
+ssh -i ~/.ssh/school ubuntu@35.175.130.26
