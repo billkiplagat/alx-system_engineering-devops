@@ -1,29 +1,10 @@
 #!/usr/bin/env bash
 
-# Update the package list and install Nginx
-sudo apt-get update
-sudo apt-get install -y nginx
-
-# Create a default Nginx configuration that listens on port 80
-echo "server {
-    listen 80;
-    listen [::]:80;
-
-    root /var/www/html/;
-    index index.htm index.html index.nginx-debian.html;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-
-}" | sudo tee /etc/nginx/sites-available/default
-
-# Restart Nginx (without using systemctl)
-sudo /etc/init.d/nginx restart
-
-# Check if Nginx is running
-if pgrep nginx > /dev/null; then
-    echo "Nginx has been installed and configured successfully."
-else
-    echo "Nginx installation or configuration failed."
-fi
+#Install nginx on your web-01 server
+#Nginx should be listening on port 80
+#When querying Nginx at its root / with a GET request (requesting a page)
+# using curl, it must return a page that contains the string Hello World!
+apt-get update
+apt-get install -y nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx restart
