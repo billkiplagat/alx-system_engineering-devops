@@ -13,7 +13,7 @@ apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 sudo echo "$STRING" > /var/www/html/index.nginx-debian.html
-sed -i "14i\ $REDIRECT" "$FILE"
+sed -i "37i\ $REDIRECT" "$FILE"
 echo "$FOUR" > "$ERRORFILE"
-sed -i "20i\ $ERRORREDIRECT" "$FILE"
+sed -i "37i\ $ERRORREDIRECT" "$FILE"
 sudo /etc/init.d/nginx restart
