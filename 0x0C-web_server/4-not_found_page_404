@@ -11,17 +11,9 @@ ERRORREDIRECT="\n\terror_page 404 /404error.html;\n\tlocation = /404error.html {
 
 apt-get -y update
 apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-
+sudo ufw allow 'Nginx HTTP'
 echo "$STRING" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
-
-# Insert the redirect configuration using sudo and tee
 echo -e "$REDIRECT" | sudo tee -a "$FILE" > /dev/null
-
-# Create the custom 404 error file
 echo "$FOUR" | sudo tee "$ERRORFILE" > /dev/null
-
-# Insert the error redirect configuration using sudo and tee
 echo -e "$ERRORREDIRECT" | sudo tee -a "$FILE" > /dev/null
-
 sudo /etc/init.d/nginx restart
