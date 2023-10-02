@@ -1,32 +1,9 @@
 #!/usr/bin/env bash
-#Configure your Nginx server so that /redirect_me is redirecting to another page.
-#The redirection must be a “301 Moved Permanently”
-# Update the package list and install Nginx
-sudo apt-get update
+# Configure your Nginx server so that /redirect_me is redirecting
+# to another page.
+sudo apt-get update -y
 sudo apt-get install -y nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-enabled/default
 
-# Create a default Nginx configuration that listens on port 80
-echo "server {
-    listen 80;
-    listen [::]:80;
-
-    root /var/www/html/;
-    index index.htm index.html index.nginx-debian.html;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-    }
-}" | sudo tee /etc/nginx/sites-available/default
-
-# Restart Nginx (without using systemctl)
-sudo /etc/init.d/nginx restart
-
-# Check if Nginx is running
-if pgrep nginx > /dev/null; then
-    echo "Nginx has been installed and configured successfully."
-else
-    echo "Nginx installation or configuration failed."
-fi
+sudo service nginx restart
