@@ -13,7 +13,8 @@ if __name__ == '__main__':
     # Create a session to reuse connections for multiple requests
     sessionReq = requests.Session()
     emp_id = argv[1]
-    idURL = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(emp_id)
+    idURL = ('https://jsonplaceholder.typicode.com/users/{}/todos'
+             .format(emp_id))
     nameURL = 'https://jsonplaceholder.typicode.com/users/{}'.format(emp_id)
 
     # Send requests to get employee's TODO list and name
